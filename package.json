@@ -1,0 +1,33 @@
+{
+  "name": "demoscenarios",
+  "version": "1.0.0",
+  "description": "BuildCypress",
+  "main": "index.js",
+  "scripts": {
+    "test:wordtestcase": "npx cypress run --env grep=\"FirstTest\" --spec \"D://CypressProject//Cypress2022//DemoExamples//cypress//integration//Hook//testHook_Word.spec.js\"",
+    "test:wordtestsuite": "npx cypress run --env grep=\"testsuite\" --spec \"D://CypressProject//Cypress2022//DemoExamples//cypress//integration//Hook//testHook_Word.spec.js\"",
+    "test:grep1": "npx cypress run --env grepTags=\"@Smoke + @CI\"",
+    "test:grepAnd2": "npx cypress run --env grepTags=\"@Development + @BVT\" ",
+    "test:grepexcept2": "npx cypress run --env grepTags=\"-@Smoke\" --spec \"D://CypressProject//Cypress2022//DemoExamples//cypress//integration//Hook//testHooks_Grep.spec.js\"",
+    "test:grep2OR": "npx cypress run --env grepTags=\"@CI @BVT\"",
+    "TS:grepTags": "npx cypress run --env grepTags='@test' --spec \"D://CypressProject//Cypress2022//DemoExamples//cypress//integration//Hook//testHooks_Suites.ts\"",
+    "TS:grepOR": "npx cypress run --env grepTags='@smoke @Dev' --spec \"D://CypressProject//Cypress2022//DemoExamples//cypress//integration//Hook//testHooks_Suites.ts\"",
+    "TS:grepAnd": "npx cypress run --env grepTags='@QA + @Dev' --spec \"D://CypressProject//Cypress2022//DemoExamples//cypress//integration//Hook//testHooks_Suites.ts\"",
+    "TS:grepExcept2": "npx cypress run --env grepTags='-@Dev' --spec \"D://CypressProject//Cypress2022//DemoExamples//cypress//integration//Hook//testHooks_Suites.ts\"",
+    "TS:grepBurn": "npx cypress run --env grep='QA',burn=3 --spec \"D://CypressProject//Cypress2022//DemoExamples//cypress//integration//Hook//testHooks_Suites.ts\""
+  },
+  "author": "dinakaran",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.1.0",
+    "cypress": "^9.3.1",
+    "cypress-grep": "^2.12.2",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^2.3.0",
+    "cypress-xpath": "^1.6.2",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "chai-sorted": "^0.2.0"
+  }
+}

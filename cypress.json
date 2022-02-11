@@ -1,0 +1,24 @@
+{
+    
+    "chromeWebSecurity": false,
+    "pageLoadTimeout": 90000,
+    "viewportWidth": 1366,
+    "viewportHeight": 768,
+
+    "video": true,
+    "env": {
+        "grepFilterSpecs": true
+      },
+      "retries": {
+        "runMode": 0,
+        "openMode": 0
+      },
+      "reporter": "cypress-mochawesome-reporter",
+      "reporterOptions": {      
+          "reportDir": "cypress/mochawesome-reports",
+          "charts": true,
+          "reportPageTitle": "Demo Examples",
+          "embeddedScreenshots": true
+      }
+  
+}
